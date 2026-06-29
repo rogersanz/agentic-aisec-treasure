@@ -1,3 +1,11 @@
+████████╗██████╗ ███████╗ █████╗ ███████╗██╗   ██╗██████╗ ███████╗
+╚══██╔══╝██╔══██╗██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗██╔════╝
+   ██║   ██████╔╝█████╗  ███████║███████╗██║   ██║██████╔╝█████╗
+   ██║   ██╔══██╗██╔══╝  ██╔══██║╚════██║██║   ██║██╔══██╗██╔══╝
+   ██║   ██║  ██║███████╗██║  ██║███████║╚██████╔╝██║  ██║███████╗
+   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+ 
+
 Editor's Notice
 The TREASURE AI Security Framework is an innovative security framework developed by Roger Sanz, PhD, explicitly designed to address the complex vulnerabilities and risk vectors of Agentic AI systems.
 
