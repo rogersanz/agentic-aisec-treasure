@@ -32,13 +32,7 @@ This framework is open to every contributor and practitioner with a clear focus 
 
 **Licensing & Rights Notice (CC0 1.0):** To the extent possible under law, the author has waived all copyright and related rights to this specific layout and textual implementation. You are free to copy, modify, distribute, and build upon this text, even for commercial purposes, without seeking prior permission. → [View CC0 1.0 Legal Code](https://creativecommons.org/publicdomain/zero/1.0/)
 
-> **📌 Same-day addendum — 3 July 2026 (version number unchanged, v1.1):** a post-publication verification pass against primary sources (NVD, CVE.org, OWASP GenAI Security Project, CSA, AIUC-1, contemporary reporting) identified and corrected the following, without altering the five-layer architecture or any TREASURE control (UC-\*) definition:
-> 1. **OpenClaw (CVE-2026-25253)** was described as a malicious-skill marketplace supply-chain attack. The actual CVE is a control-plane authentication vulnerability (unvalidated `gatewayUrl` → token theft → one-click RCE). Corrected throughout Sections 3.2, 7.4, 9.1, 11.7, 12.3, Appendix A, and References.
-> 2. Two real, independent 2026 incidents have been added: the **OpenClaw ignored-stop-commands / mass email deletion** incident (Section 11.8, CONTROL LAYER) and the **LiteLLM/Trivy supply-chain compromise** (Section 11.9, GOVERNANCE/EXECUTION LAYER) — the latter now anchors the skill/dependency-supply-chain lesson previously (and incorrectly) attributed to OpenClaw.
-> 3. The CSA MAESTRO layer numbering in Section 5 has been corrected to match the canonical mapping already documented in Section 13.3 (L5 Evaluation & Observability, L6 Security & Compliance [cross-cutting], L7 Agent Ecosystem), resolving an internal inconsistency between the two sections. Section 2.1's Standards Alignment Matrix has been updated to match.
-> 4. The Replit Vibe Coding Meltdown (§11.6, §9.1) has been corrected: contemporary reporting indicates the agent's claim that "rollback was impossible" was false, and data was in fact recovered — strengthening rather than weakening the ASI09 (Human-Agent Trust Exploitation) classification.
-> 5. AIUC-1's "UC-\*" control identifiers are now explicitly flagged (Section 2.1, References) as TREASURE's internal crosswalk convention, not official AIUC-1 requirement codes, given AIUC-1's quarterly update cadence.
-> 6. Added references to the NIST AI Agent Standards Initiative (CAISI, launched 17 February 2026) as a forward-looking, not-yet-cross-mapped standard to track.
+
 
 ---
 
@@ -68,9 +62,7 @@ The core adversarial problem this document addresses is the **double-agent threa
 - [Appendix A: Detailed AIUC-1 Control Mapping](#appendix-a-detailed-aiuc-1-control-by-control-mapping)
 - [References](#references)
 
-> **v1.1 additions:** Section 12 (MCP Security — The Execution Layer's Expanding Attack Surface) and Section 13 (Emerging Threat Vectors and Framework Evolution) are new in v1.1, grounded in the OWASP Practical Guide for Secure MCP Server Development (February 2026), the OWASP State of Agentic AI Security v2.01 (June 2026), and the corrected OWASP ASI taxonomy (December 2025 official numbering). The taxonomy correction note in Section 4 reflects the official December 2025 ASI numbering verified against genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/ on 3 July 2026: ASI04 = Agentic Supply Chain Vulnerabilities; ASI07 = Insecure Inter-Agent Communication; ASI08 = Cascading Agent Failures; ASI09 = Human-Agent Trust Exploitation; ASI10 = Rogue Agents. Data Leakage & Exfiltration is not a standalone ASI entry — it is a consequence of ASI01, ASI03, and ASI06. The Replit incident official name is "Replit Vibe Coding Meltdown".
->
-> **Same-day addendum (also 3 July 2026, version number unchanged):** see the corrections notice under the Editor's Notice above, and the new Sections 11.7–11.10, for the OpenClaw re-classification, two newly added 2026 incidents, and the MAESTRO layer-numbering fix.
+
 
 ---
 
