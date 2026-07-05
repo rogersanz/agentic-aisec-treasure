@@ -114,7 +114,7 @@ DATA LAYER        ← Single Governed Truth (foundation)
 
 ### 2.1 Standards Alignment Matrix
 
-> **⚠️ Corrected 3 July 2026 (same-day addendum):** the CSA MAESTRO column below uses the canonical seven-layer numbering confirmed in Section 13.3 (L1 Foundation Models, L2 Data Operations, L3 Agent Frameworks, L4 Deployment/Infrastructure, L5 Evaluation & Observability, L6 Security & Compliance — a cross-cutting layer spanning L1–L5, L7 Agent Ecosystem). Earlier printings of this table used a non-canonical variant (L5 "Ecosystem & Tooling", L6 "Human-AI Interface", L7 "Governance & Audit") that has been retired; see Section 13.3 for the full rationale and the note below for how TREASURE's Control and Governance Layers map onto MAESTRO's single cross-cutting L6.
+
 
 | TREASURE Layer | OWASP ASI | CSA MAESTRO | AIUC-1* | NIST RMF | OWASP AI Exchange |
 |----------------|-----------|------------|--------|----------|------------------|
@@ -620,8 +620,6 @@ Sandboxing                  → MCP server containerization (non-root, network-r
 Pre-Call Hooks              → Input validation against strict JSON Schema
 Output Validation Pipeline  → Output validation + tool description behavioral verification
 ```
-
-*(Corrected 3 July 2026: OpenClaw CVE-2026-25253 is a control-plane authentication vulnerability, not a skill-marketplace supply-chain attack — see Section 11.7.)* The LiteLLM/Trivy compromise (Section 11.9, February–March 2026) is the TREASURE evidence base's canonical CI/CD-tooling supply chain attack: an infected third-party binary (Trivy) executed unpinned inside a downstream project's (LiteLLM) build pipeline, propagating compromise without any skill or MCP tool itself being directly poisoned. The OWASP MCP Secure Development Guide's requirements on cryptographically signed tool manifests and pinned, content-addressed dependencies would have blocked this class of propagation independently of any single vendor's own code review.
 
 ---
 
