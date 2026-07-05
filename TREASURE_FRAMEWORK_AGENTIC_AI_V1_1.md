@@ -278,8 +278,6 @@ Every agent must be a bounded failure domain. When agents share credentials or i
 
 TREASURE operates as an implementation overlay on top of MAESTRO: where MAESTRO identifies the threat surface at each architectural layer, TREASURE specifies the defensive controls.
 
-> **⚠️ Corrected 3 July 2026:** this table previously used a non-canonical L5–L7 labeling that contradicted Section 13.3's authoritative mapping (sourced from the original February 2025 CSA publication by Ken Huang). It has been corrected below. L6 (Security & Compliance) is a cross-cutting layer in the canonical CSA model, not a single-purpose "Human-AI Interface" layer; TREASURE's CONTROL and GOVERNANCE layers both draw on it, decomposed for operational clarity (see the "†" note in Section 2.1).
-
 | L | MAESTRO Layer (canonical) | Primary Threat | TREASURE Coverage | Key Technical Response |
 |---|--------------|---------------|------------------|----------------------|
 | L1 | Foundation Models | Model theft, adversarial prompt injection, backdoor attacks | SECURITY + EXECUTION | Adversarial robustness testing; input validation; sandbox isolation |
@@ -363,8 +361,6 @@ AI DEFEND organizes runtime patterns into five categories; the following maps ea
 | SECURITY LAYER | IAM ExternalId role per agent + VPC + CloudWatch + Bedrock invocation log + Amazon Detective | No native JIT per invocation — compensate with short MaxSessionDuration + rotation |
 
 ### 7.4 Failure Case: OpenClaw (CVE-2026-25253) — Layer-by-Layer Analysis
-
-> **⚠️ Corrected 3 July 2026:** this case study previously described a fictionalized 5-stage "malicious skill from a marketplace" kill chain that does not match the actual CVE. It has been replaced below with the verified technical mechanism. For a real 2026 skill-supply-chain incident illustrating the marketplace/provenance lesson, see Section 11.9 (LiteLLM/Trivy).
 
 CVE-2026-25253 (CVSS 8.8, CWE-669 — Incorrect Resource Transfer Between Spheres) affected OpenClaw (aka clawdbot/Moltbot) before version 2026.1.29. The Control UI accepted a `gatewayUrl` value from the page's query string and used it to open a WebSocket connection automatically, without validating the origin or requiring user confirmation, transmitting the stored gateway authentication token to whatever endpoint the URL specified.
 
